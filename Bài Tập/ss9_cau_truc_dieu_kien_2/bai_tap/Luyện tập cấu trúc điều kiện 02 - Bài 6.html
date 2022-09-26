@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Giải phương trình bậc nhất </h2>
+<p1> ax + b = 0</p1>
+<input type="text" name="nhập" placeholder="Nhập biến a" id="biena">
+<input type="text" placeholder="Nhập biến b" id="bienb">
+<p id="x" </p>
+<button type="button" onclick="ketqua()">Kết quả</button>
+<script>
+    function ketqua(){
+        let a = +document.getElementById('biena').value;
+        let b = +document.getElementById('bienb').value;
+        let x = -b/a
+        document.getElementById('x').innerHTML="Kết quả là x = " +x;
+    }
+</script>
+
+</body>
+</html>
