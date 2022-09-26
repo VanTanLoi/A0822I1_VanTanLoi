@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="text" id="window" style="width: 110px; color: blue; text-align: right">
+<table >
+    <tr>
+        <td> <input type="button" onclick="nhap(1)" value="1" </input> </td>
+        <td> <input type="button" onclick="nhap(2)" value="2" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="3" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="+" </input> </td>
+    </tr>
+    <tr>
+        <td> <input type="button" onclick="nhap(this.value)" value="4" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="5" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="6" </input> </td>
+        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="-" </input> </td>
+    </tr>
+    <tr>
+        <td> <input type="button" onclick="nhap(this.value)" value="7" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="8" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="9" </input> </td>
+        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="-" </input> </td>
+    </tr>
+    <tr>
+        <td> <input type="button" onclick="xoa()" value="C" </input> </td>
+        <td> <input type="button" onclick="nhap(this.value)" value="0" </input> </td>
+        <td> <input type="button" onclick="bang()" value="=" </input> </td>
+        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="/" </input> </td>
+    </tr>
+</table>
+<script>
+    function nhap(number) {
+        document.getElementById('window').value += number;
+    }
+    function bang() {
+        let chuoi = document.getElementById('window').value;
+        document.getElementById('window').value = eval(chuoi);
+    }
+    function xoa() {
+        document.getElementById('window').value= " ";
+
+    }
+</script>
+
+</body>
+</html>
